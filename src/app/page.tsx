@@ -2,9 +2,7 @@ import ProductList from '@/components/ProductList';
 
 
 async function fetchProducts() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`, {
-    next: { revalidate: 3600 }, 
-  });
+  const res = await fetch(`https://renartcasestudy.vercel.app/api/products`);
 
   if (!res.ok) {
     throw new Error('Failed to fetch products');
